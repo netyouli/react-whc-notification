@@ -1,0 +1,34 @@
+{
+  "name": "react-whc-notification",
+  "version": "1.0.0",
+  "description": "A react、vue、react native module to post and observer notification, it works on iOS and Android H5.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netyouli/react-whc-notification.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-component",
+    "react-native-notification",
+    "react-native-whc-notification",
+    "notification",
+    "whc-notification",
+    "notification-ios",
+    "lnotification-android",
+    "react-component",
+    "ios",
+    "android"
+  ],
+  "author": "wuhaichao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/netyouli/react-whc-notification/issues"
+  },
+  "peerDependencies": {},
+  "homepage": "https://github.com/netyouli/react-whc-notification#readme",
+  "dependencies": {}
+}
