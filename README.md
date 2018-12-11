@@ -1,5 +1,6 @@
 # react-whc-notification
 A react、vue、react native module to post and observer notification, it works on iOS and Android、H5.
+(支持一对多发送通知消息、主要解决react、react-native、vue、h5夸组件页面之间的通信)
 
 [ ![release](https://img.shields.io/github/release/netyouli/react-whc-notification.svg?maxAge=2592000?style=flat-square)](https://github.com/netyouli/react-whc-notification/releases)
 [ ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/netyouli/react-whc-notification/pulls)
