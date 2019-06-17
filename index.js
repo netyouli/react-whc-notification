@@ -30,6 +30,7 @@ export default class Notification {
     constructor() {
         this.__observerMap = new Map();
         this.__hashCodeSet = new Set();
+        this.__didPostNotifyMap = new Map();
         this.__segmentKey = '_#$@_';
     }
 
@@ -49,6 +50,7 @@ export default class Notification {
                             block = null,
                         } = value;
                         block && block(param);
+                        Notification.__default.__didPostNotifyMap.set(name, param);
                     }
                 }
             });
@@ -58,15 +60,17 @@ export default class Notification {
     };
 
 
-    /**
+     /**
      * 添加监听通知
      * @param observer  监听通知的对象
-     * @param block     通知回调
      * @param name      通知名称
+     * @param block     通知回调
+     * @param isResend  是否补发通知（主要是用于已经发过的通知但是还没来得及注册监听的情况）
      */
     static addObserver = (observer,
                           name,
-                          block = null) => {
+                          block = null, 
+                          isResend = false) => {
         if (observer != void 0 && name != void 0) {
             const {
                 __notification_hashCode = ''
@@ -76,6 +80,12 @@ export default class Notification {
             }
             const key = name + Notification.__default.__segmentKey + observer.__notification_hashCode;
             Notification.__default.__observerMap.set(key, {observer, block});
+            if (isResend) {
+                const param = Notification.__default.__didPostNotifyMap.get(name);
+                if (param != void 0) {
+                    block && block(param);
+                }
+            }
         }else {
             console.warn('[Notification] observer not null or name not null');
         }
@@ -119,7 +129,6 @@ export default class Notification {
     /// 生成hashCode
     __makeHashCode = () => {
         let hashCode = '';
-        const len = 8;
         const keys = ['0', '1', '2', '3', '4',
                       '5', '6', '7', '8', '9',
                       'a', 'b', 'c', 'd', 'e',
@@ -134,7 +143,7 @@ export default class Notification {
                         'T', 'U', 'V', 'W', 'X',
                         'Y', 'Z'];
         const keysCount = keys.length;
-        for(let i = 0; i < len; i++) {
+        for(let i = 0; i < 8; i++) {
             const pos = Math.round(Math.random() * (keysCount - 1));
             hashCode += keys[pos];
         }

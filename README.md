@@ -1,6 +1,7 @@
 # react-whc-notification
-A react、vue、react native module to post and observer notification, it works on iOS and Android、H5.
-(支持一对多发送通知消息、主要解决react、react-native、vue、h5夸组件页面之间的通信)
+A react、vue、react native module to post and observer notification, it works on React 、React-Native 、Vue、H5. (支持一对多发送通知消息、主要解决react、react-native、vue、h5夸组件页面之间的通信状态管理等)
+
+### 该组件可以用来替代Redux，Vuex进行状态管理，使用更加简单高效，强力推荐
 
 [ ![release](https://img.shields.io/github/release/netyouli/react-whc-notification.svg?maxAge=2592000?style=flat-square)](https://github.com/netyouli/react-whc-notification/releases)
 [ ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/netyouli/react-whc-notification/pulls)
@@ -34,6 +35,11 @@ Add observer notification:
       Notification.addObserver(this, 'ObserverNotificationName' ,(param) => {
           console.log(param);
       });
+
+      // 最后一个参数true用来补发通知（主要是用于监听已经发过的通知但是监听者还没来得及注册监听的情况）
+      Notification.addObserver(this, 'ObserverNotificationName' ,(param) => {
+          console.log(param);
+      }, true);
   }
 
 ```
