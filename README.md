@@ -3,7 +3,6 @@ A react、vue、react native module to post and observer notification, it works 
 
 ### 该组件可以用来替代Redux，Vuex进行状态管理，使用更加简单高效，强力推荐
 
-[ ![release](https://img.shields.io/github/release/netyouli/react-whc-notification.svg?maxAge=2592000?style=flat-square)](https://github.com/netyouli/react-whc-notification/releases)
 [ ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/netyouli/react-whc-notification/pulls)
 [ ![NPM version](http://img.shields.io/npm/v/react-whc-notification.svg?style=flat)](https://www.npmjs.com/package/react-whc-notification)
 [![License MIT](http://img.shields.io/badge/license-MIT-orange.svg?style=flat)](https://raw.githubusercontent.com/crazycodeboy/react-whc-notification/master/LICENSE)
