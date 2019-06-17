@@ -74,7 +74,7 @@ componentWillUnmount() {
 Method   |  Type     | Optional | Description
 ----------------- | -------- | -------- | -----------
 post(string, any)   | function | true | post notification
-addObserver(object, string, function)  |   function  |  true   | observer notification
+addObserver(object, string, function, boolean)  |   function  |  true   | observer notification
 removeObserver(object, string)  |   function  |  true   | remove observer notification
 
 
