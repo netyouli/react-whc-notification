@@ -50,10 +50,10 @@ export default class Notification {
                             block = null,
                         } = value;
                         block && block(param);
-                        Notification.__default.__didPostNotifyMap.set(name, param);
                     }
                 }
             });
+            Notification.__default.__didPostNotifyMap.set(name, param);
         }else {
             console.warn('[Notification] post name not null');
         }

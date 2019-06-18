@@ -1,6 +1,6 @@
 {
   "name": "react-whc-notification",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A react、vue、react native module to post and observer notification, it works on iOS and Android H5.",
   "main": "index.js",
   "scripts": {
